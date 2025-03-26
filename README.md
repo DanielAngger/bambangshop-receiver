@@ -2,6 +2,8 @@
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
 
 ---
+<details>
+<summary><b>Abous This Project</b></summary>
 
 ## About this Project
 In this repository, we have provided you a REST (REpresentational State Transfer) API project using Rocket web framework.
@@ -78,12 +80,31 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [ ] Commit: `Implement list_messages function in Notification service.`
     -   [ ] Commit: `Implement list function in Notification controller.`
     -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+</details>
+
+<details>
+<summary><b>Reflections</b></summary>
 
 ## Your Reflections
 This is the place for you to write reflections:
 
 ### Mandatory (Subscriber) Reflections
 
+<details>
+<summary><b>Reflection Subscriber 1</b></summary>
+
 #### Reflection Subscriber-1
 
+1. Dalam tutorial ini, kita menggunakan RwLock<> untuk mengamankan akses ke daftar notifikasi (Vec<Notification>) dalam lingkungan yang multi-threaded. Ini digunakan untuk menghindari race condition, atau saat dimana beberapa thread mencoba membaca atu menulis ke Vec saat bersamaan. Bila tidak ada RwLock<>, data akan crash. Tanpa RwLock<>, kita mungkin menggunakan Mutex<> sebagai alternatif, tetapi Mutex<> mengunci secara eksklusif bahkan untuk operasi baca, sehingga kurang efisien dibandingkan RwLock<>. Ini jelas bisa menyebabkan deadlock.
+
+2. Di Rust, mutasi langsung terhadap static variable tidak diperbolehkan tanpa mekanisme sinkronisasi. Ini berbeda dengan Java, di mana kita bisa mengubah isi static variable dengan fungsi statis tanpa batasan yang ketat. Karena, seperti dijelaskan di nomor 1, Rust mengutamakan safety (mencegah race condition & data crash), dimana pada Java mengizinkan perubahan langsung pada static variable, tetapi ini bisa menyebabkan race condition jika ada banyak thread yang mengakses dan memodifikasi variabel secara bersamaan.
+
+</details>
+
+<details>
+<summary><b>Reflection Subscriber 2</b></summary>
+
 #### Reflection Subscriber-2
+
+</details>
+</details>
