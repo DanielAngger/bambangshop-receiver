@@ -106,5 +106,11 @@ This is the place for you to write reflections:
 
 #### Reflection Subscriber-2
 
+1. Saya telah mengeksplorasi bagian lain di luar tutorial, termasuk src/lib.rs. Dari eksplorasi ini, saya belajar beberapa hal, contohnya kegunaan lib.rs. Yang saya pahami, lib.rs berguna untuk mengatur modul dan mendefinisikan fungsi atau struktur yang dapat digunakan di berbagai bagian proyek. Jadi, kegunaan lib.rs seperti mengenkapsulasi banyak pustaka.
+
+2. Observer Pattern sangat memudahkan dalam menambahkan lebih banyak subscriber ke sistem. Dalam tutorial kali ini, setiap subscriber hanya perlu didaftarkan ke dalam sistem menggunakan SubscriberRepository::add, dan setelah itu mereka akan secara otomatis menerima notifikasi saat ada perubahan yang relevan. Tidak perlu mengubah kode utama karena sistem sudah didesain untuk menangani banyak subscriber secara dinamis.
+
+3. Saya belum mencobanya, tetapi yang saya tahu itu sangat berguna untuk memastikan bahwa sistem berjalan dengan benar dan dapat diandalkan. Saya bisa melakukan verifikasi respons API dan deteksi bug lebih awal. Jadi itu akan sangat membantu.
+
 </details>
 </details>

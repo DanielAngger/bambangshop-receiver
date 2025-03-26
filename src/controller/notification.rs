@@ -6,8 +6,7 @@ use crate::service::notification::NotificationService;
 
 #[get("/subscribe/<product_type>")]
 pub fn subscribe(product_type: &str) -> Result<Json<SubscriberRequest>> {
-    let service = NotificationService::new();
-    match service.subscribe(product_type) {
+    return match NotificationService::subscribe(product_type) {
         Ok(f) => Ok(Json::from(f)),
         Err(e) => Err(e),
     }
@@ -15,8 +14,7 @@ pub fn subscribe(product_type: &str) -> Result<Json<SubscriberRequest>> {
 
 #[get("/unsubscribe/<product_type>")]
 pub fn unsubscribe(product_type: &str) -> Result<Json<SubscriberRequest>> {
-    let service = NotificationService::new();
-    match service.unsubscribe(product_type) {
+   return match NotificationService::unsubscribe(product_type) {
         Ok(f) => Ok(Json::from(f)),
         Err(e) => Err(e),
     }
